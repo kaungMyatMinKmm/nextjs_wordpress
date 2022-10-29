@@ -1,7 +1,6 @@
 import { gql } from "@apollo/client";
 import MenuFragment from "./fragments/menus";
 
-
 export const HeaderFooter = `
   header: getHeader {
     favicon
@@ -46,4 +45,4 @@ query GET_MENUS {
   ${HeaderFooter}
 }
   ${MenuFragment}
-`
+` 

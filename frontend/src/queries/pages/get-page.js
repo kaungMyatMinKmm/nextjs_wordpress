@@ -1,6 +1,7 @@
 import { gql } from '@apollo/client';
 import MenuFragment from '../fragments/menus';
 import { HeaderFooter } from '../get-header-footer'
+import SeoFragment from '../fragments/seo';
 
 // Get Pages
 
@@ -13,7 +14,11 @@ export const GET_PAGE = gql`
             content
             slug
             uri
+            seo {
+                ...SeoFragment
+              }
         }
     }
     ${MenuFragment}
+    ${SeoFragment}
 `;
